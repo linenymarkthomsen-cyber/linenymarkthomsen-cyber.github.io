@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Drum Machine API - Demo</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+  .pads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .pad {
+    aspect-ratio: 1;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #222;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .controls { display: flex; gap: 8px; margin: 16px 0; }
+  button { padding: 8px 14px; border-radius: 6px; border: 1px solid #777; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>Drum Machine API — pagina di test</h1>
+  <p>Premi Q W E A S D o clicca un pad. Usa i controlli per registrare e riascoltare.</p>
+
+  <div class="pads">
+    <div class="pad" data-key="Q">Q</div>
+    <div class="pad" data-key="W">W</div>
+    <div class="pad" data-key="E">E</div>
+    <div class="pad" data-key="A">A</div>
+    <div class="pad" data-key="S">S</div>
+    <div class="pad" data-key="D">D</div>
+  </div>
+
+  <div class="controls">
+    <button id="recordBtn">● Registra</button>
+    <button id="stopBtn">■ Ferma</button>
+    <button id="playBtn">▶ Riproduci</button>
+  </div>
+
+  <script src="drum-machine-api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
